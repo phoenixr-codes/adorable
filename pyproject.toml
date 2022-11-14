@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adorable"
+version = "0.1.0"
+description = "Style Text With Colors And Effects"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = []
+keywords = [
+    "ansi",
+    "color",
+    "colour",
+    "console",
+    "style",
+    "terminal",
+]
+license = {text = "MIT License"}
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Text Processing",
+    "Typing :: Typed",
+]
+
+[project.optional-dependencies]
+docs = [
+    "furo>=2022.9.15",
+    "Sphinx>=5.0.0",
+    "sphinx_copybutton",
+    "sphinx_inline_tabs",
+    "sphinxcontrib-repl",
+    "sphinxcontrib-spelling",
+    "sphinxemoji",
+]
+
+[project.urls]
+"Documentation" = "https://phoenixr-codes.github.io/adorable/"
+"Source Code" = "https://github.com/phoenixr-codes/adorable/"
+
+[tool.setuptools]
+packages = ["adorable"]
+
+[tool.mypy]
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+
+no_implicit_optional = true
+warn_unused_ignores = true
+
