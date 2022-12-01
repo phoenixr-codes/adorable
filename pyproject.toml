@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "adorable"
-version = "0.1.0"
-description = "Style Text With Colors And Effects"
+version = "0.1.1"
+description = "Make Text Adorable"
 readme = "README.md"
 requires-python = ">=3.7"
 dependencies = []

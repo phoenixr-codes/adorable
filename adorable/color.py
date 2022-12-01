@@ -21,8 +21,8 @@ from .utils import _copydoc, _get_closest_color,  RGB, HEX, T_RGB
 
 
 
-NOT_INITIALIZED: str = "color not initialized"
-ALREADY_INITIALIZED: str = "color already initialized"
+_NOT_INITIALIZED: str = "color not initialized"
+_ALREADY_INITIALIZED: str = "color already initialized"
 
 
 class _GroundError(Exception):
@@ -114,9 +114,6 @@ class Color(Ansi, metaclass = ABCMeta):
         self._data = data
         self._ground: _Ground = _Ground.NONE
     
-    def __repr__(self) -> str:
-        return f"<{self.__class__.__name__}>"
-    
     def __str__(self) -> str:
         if not self.is_initialized:
             warnings.warn(
@@ -128,12 +125,33 @@ class Color(Ansi, metaclass = ABCMeta):
         
         return self.enable_str()
     
+    def __or__(self, other: Color) -> Color:
+        """
+        Returns the color that is supported. Returns
+        the color with a larger color palette when
+        both are supported. Returns the color with a
+        smaller color palette when neither is supported.
+        """
+        if not isinstance(other, Color):
+            return NotImplemented
+        
+        if other.is_supported() and self.is_supported():
+            return max(self, other, key = lambda x: x._termtype)
+        
+        if other.is_supported():
+            return other
+        
+        if self.is_supported():
+            return self
+        
+        return min(self, other, key = lambda x: x._termtype)
+    
     def __add__(self, other: Ansi) -> Ansi:
         if isinstance(other, Color):
             _Ground.check((
                 operator.ne,
                 other, _Ground.NONE,
-                NOT_INITIALIZED
+                _NOT_INITIALIZED
             ), (
                 operator.ne,
                 other, self,
@@ -151,7 +169,7 @@ class Color(Ansi, metaclass = ABCMeta):
             _Ground.check((
                 operator.ne,
                 other, _Ground.NONE,
-                NOT_INITIALIZED
+                _NOT_INITIALIZED
             ), (
                 operator.ne,
                 other, self,
@@ -167,7 +185,7 @@ class Color(Ansi, metaclass = ABCMeta):
         _Ground.check((
             operator.ne,
             self, _Ground.NONE,
-            NOT_INITIALIZED
+            _NOT_INITIALIZED
         ))
         
         return paint(*args, style = self, **kwargs)
@@ -176,7 +194,7 @@ class Color(Ansi, metaclass = ABCMeta):
         _Ground.check((
             operator.ne,
             self, _Ground.NONE,
-            NOT_INITIALIZED
+            _NOT_INITIALIZED
         ))
         
         return super().enable_str()
@@ -185,7 +203,7 @@ class Color(Ansi, metaclass = ABCMeta):
         _Ground.check((
             operator.ne,
             self, _Ground.NONE,
-            NOT_INITIALIZED
+            _NOT_INITIALIZED
         ))
         
         return super().disable_str()
@@ -197,6 +215,15 @@ class Color(Ansi, metaclass = ABCMeta):
         Checks if the color is initialized or not.
         """
         return self._ground != _Ground.NONE
+    
+    def is_supported(self) -> bool:
+        """
+        .. versionadded:: 0.1.1
+        
+        Checks if the color system is supported
+        or not.
+        """
+        return self._termtype.is_supported()
     
     def _get_ansi(self) -> str:
         return _get_ansi_string(self._ansi)
@@ -217,7 +244,7 @@ class Color(Ansi, metaclass = ABCMeta):
         _Ground.check((
             operator.eq,
             self, _Ground.NONE,
-            ALREADY_INITIALIZED
+            _ALREADY_INITIALIZED
         ))
         
         self._ansi.extend(self._form(_Ground.FORE))
@@ -233,7 +260,7 @@ class Color(Ansi, metaclass = ABCMeta):
         _Ground.check((
             operator.eq,
             self, _Ground.NONE,
-            ALREADY_INITIALIZED
+            _ALREADY_INITIALIZED
         ))
         
         self._ansi.extend(self._form(_Ground.BACK))
@@ -313,7 +340,7 @@ class Color(Ansi, metaclass = ABCMeta):
             hex = f"{hex:X}"
             
             # leading 0s will be removed so we need
-            # to add them (e. g. 0x0AF -> AF)
+            # to add them (e. g. 0x0AF -> AF -> 0AF)
             if len(hex) < 3:
                 hex = hex.zfill(3)
             

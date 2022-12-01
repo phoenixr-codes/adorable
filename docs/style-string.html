@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Creating Colors" href="creating-color.html" /><link rel="prev" title="Quickstart" href="quickstart.html" />
 
-    <meta name="generator" content="sphinx-5.0.2, furo 2022.09.29"/>
-        <title>Styling A String - adorable 0.1.0 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
+        <title>Styling A String - adorable 0.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -126,7 +126,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">adorable 0.1.0 documentation</div></a>
+      <a href="index.html"><div class="brand">adorable 0.1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -149,7 +149,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">adorable 0.1.0 documentation</span>
+  <span class="sidebar-brand-text">adorable 0.1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -157,12 +157,12 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Quickstart:</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Quickstart</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Usage:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
 <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Styling A String</a></li>
 <li class="toctree-l1"><a class="reference internal" href="creating-color.html">Creating Colors</a></li>
@@ -175,6 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="why-adorable.html">Why Use adorable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="caution-ansi-strings.html">Caution When Using Ansi Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="show-appreciation.html">Show Appreciation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Library Updates</span></p>
 <ul>
@@ -215,11 +216,11 @@
         </div>
         <article role="main">
           <section id="styling-a-string">
-<h1>Styling A String<a class="headerlink" href="#styling-a-string" title="Permalink to this heading">#</a></h1>
+<h1>Styling A String<a class="headerlink" href="#styling-a-string" title="Permalink to this headline">#</a></h1>
 <p>Styling strings is fundamental when using adorable
 and there are multiple ways of doing so.</p>
 <section id="paint-and-printc">
-<h2><code class="docutils literal notranslate"><span class="pre">paint()</span></code> and <code class="docutils literal notranslate"><span class="pre">printc()</span></code><a class="headerlink" href="#paint-and-printc" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">paint()</span></code> and <code class="docutils literal notranslate"><span class="pre">printc()</span></code><a class="headerlink" href="#paint-and-printc" title="Permalink to this headline">#</a></h2>
 <p>One method is using the <code class="docutils literal notranslate"><span class="pre">paint</span></code> function (and
 the equivalent version <code class="docutils literal notranslate"><span class="pre">printc</span></code> in order to
 directly print it).</p>
@@ -236,15 +237,15 @@ directly print it).</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.ansi.</span></span><span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to style. The <code class="docutils literal notranslate"><span class="pre">str()</span></code> function will
 be called on each object.</p></li>
-<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="api.html#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em>]</em>) – Ansi object that styles the string.</p></li>
+<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="api.html#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a><em>]</em>) – Ansi object that styles the string.</p></li>
 <li><p><strong>sep</strong> (<em>str</em>) – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
 </dd>
 </dl>
@@ -261,14 +262,14 @@ be called on each object.</p></li>
 built-in print function. It also provides
 an extra parameter.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Positional arguments passed to <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">print</a></p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – Keyword arguments passed to <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">print</a></p></li>
 <li><p><strong>style</strong> – Ansi objects that styles the string.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -279,18 +280,18 @@ an extra parameter.</p>
 </div>
 </section>
 <section id="calling-the-ansi-object">
-<h2>Calling the ansi object<a class="headerlink" href="#calling-the-ansi-object" title="Permalink to this heading">#</a></h2>
+<h2>Calling the ansi object<a class="headerlink" href="#calling-the-ansi-object" title="Permalink to this headline">#</a></h2>
 <p>Another method is to call the ansi object like
 it would be a function.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">adorable</span> <span class="kn">import</span> <span class="n">color</span>
 
 <span class="n">RED</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fg</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">RED</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">RED</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
 <section id="using-markup">
-<span id="id1"></span><h2>Using markup<a class="headerlink" href="#using-markup" title="Permalink to this heading">#</a></h2>
+<span id="id1"></span><h2>Using markup<a class="headerlink" href="#using-markup" title="Permalink to this headline">#</a></h2>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>This feature is not yet implemented in this
@@ -310,7 +311,7 @@ processing.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">markup_xml</span><span class="p">(</span><span class="s2">&quot;Hello [colorful](RED) World&quot;</span><span class="p">,</span> <span class="n">filter_ansi</span><span class="p">(</span><span class="nb">locals</span><span class="p">())))</span>
 </pre></div>
 </div>
-<p>The above example uses the <code class="xref py py-func docutils literal notranslate"><span class="pre">filter_ansi()</span></code> method,
+<p>The above example uses the <a class="reference internal" href="api.html#adorable.filter_ansi" title="adorable.filter_ansi"><code class="xref py py-func docutils literal notranslate"><span class="pre">adorable.filter_ansi()</span></code></a> method,
 however a <a class="reference internal" href="stylesheet.html#stylesheet"><span class="std std-ref">Using a stylesheet file</span></a> should be used, especially
 for large projects.</p>
 </section>
@@ -401,7 +402,6 @@ for large projects.</p>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>

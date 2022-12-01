@@ -14,7 +14,7 @@ color
 =====
 
 .. automodule:: adorable.color
-   :special-members: __add__, __iadd__, __call__
+   :special-members: __or__, __add__, __iadd__, __call__
 
 
 ======
@@ -43,7 +43,7 @@ ansi
 ====
 
 .. automodule:: adorable.ansi
-   :special-members: __call__
+   :special-members: __add__, __iadd__, __call__
 
 =====
 style

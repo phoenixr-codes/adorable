@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Known Issues" href="known-issues.html" />
 
-    <meta name="generator" content="sphinx-5.0.2, furo 2022.09.29"/>
-        <title>Changelog - adorable 0.1.0 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
+        <title>Changelog - adorable 0.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -126,7 +126,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">adorable 0.1.0 documentation</div></a>
+      <a href="index.html"><div class="brand">adorable 0.1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -149,7 +149,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">adorable 0.1.0 documentation</span>
+  <span class="sidebar-brand-text">adorable 0.1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -157,12 +157,12 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Quickstart:</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Quickstart</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Usage:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="style-string.html">Styling A String</a></li>
 <li class="toctree-l1"><a class="reference internal" href="creating-color.html">Creating Colors</a></li>
@@ -175,6 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="why-adorable.html">Why Use adorable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="caution-ansi-strings.html">Caution When Using Ansi Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="show-appreciation.html">Show Appreciation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Library Updates</span></p>
 <ul class="current">
@@ -215,15 +216,45 @@
         </div>
         <article role="main">
           <section id="changelog">
-<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h1>
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Only releases <strong>after</strong> 0.0.1b2 are recorded here.</p>
 </div>
 <section id="id1">
-<h2>0.1.0 (29-10-2022)<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<h2>0.1.1 (01-12-2022)<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
 <section id="added">
-<h3>Added<a class="headerlink" href="#added" title="Permalink to this heading">#</a></h3>
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>🆕 Added method
+<a class="reference internal" href="api.html#adorable.term.Terminal.is_supported" title="adorable.term.Terminal.is_supported"><code class="xref py py-meth docutils literal notranslate"><span class="pre">adorable.term.Terminal.is_supported()</span></code></a>.</p></li>
+<li><p>🆕 Added method
+<a class="reference internal" href="api.html#adorable.color.Color.is_supported" title="adorable.color.Color.is_supported"><code class="xref py py-meth docutils literal notranslate"><span class="pre">adorable.color.Color.is_supported()</span></code></a>.</p></li>
+<li><p>🆕 Added <code class="docutils literal notranslate"><span class="pre">|</span></code> operator for class
+<a class="reference internal" href="api.html#adorable.color.Color" title="adorable.color.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">adorable.color.Color</span></code></a>.</p></li>
+</ul>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>🆕 <a class="reference internal" href="api.html#adorable.term.Terminal.get_term" title="adorable.term.Terminal.get_term"><code class="xref py py-meth docutils literal notranslate"><span class="pre">adorable.term.Terminal.get_term()</span></code></a>
+now caches the result.</p></li>
+<li><p>🗑️ <a class="reference internal" href="api.html#adorable.color.Color" title="adorable.color.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">adorable.color.Color</span></code></a> now
+has the default <code class="docutils literal notranslate"><span class="pre">__repr__</span></code> method.</p></li>
+</ul>
+</section>
+<section id="removed">
+<h3>Removed<a class="headerlink" href="#removed" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>🗑️ Removed <code class="docutils literal notranslate"><span class="pre">BIT4</span></code> value of
+enum <a class="reference internal" href="api.html#adorable.term.Terminal" title="adorable.term.Terminal"><code class="xref py py-class docutils literal notranslate"><span class="pre">adorable.term.Terminal</span></code></a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="id2">
+<h2>0.1.0 (29-10-2022)<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<section id="id3">
+<h3>Added<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🆕 Added stylesheet module
 (<a class="reference internal" href="stylesheet.html#stylesheet"><span class="std std-ref">Using a stylesheet file</span></a>, <a class="reference internal" href="api.html#module-adorable.stylesheet" title="adorable.stylesheet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">adorable.stylesheet</span></code></a>).</p></li>
@@ -239,17 +270,17 @@ into account.</p></li>
 </ul>
 </section>
 <section id="fixed">
-<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this heading">#</a></h3>
+<h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🔨 Corrected error messages.</p></li>
 <li><p>🔨 Calling
 <a class="reference internal" href="api.html#adorable.color.Color.enable_str" title="adorable.color.Color.enable_str"><code class="xref py py-meth docutils literal notranslate"><span class="pre">adorable.color.Color.enable_str()</span></code></a> and
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">adorable.Color.Color.disable_str()</span></code> now
+<a class="reference internal" href="api.html#adorable.color.Color.disable_str" title="adorable.color.Color.disable_str"><code class="xref py py-meth docutils literal notranslate"><span class="pre">adorable.color.Color.disable_str()</span></code></a> now
 raise Exceptions when color is not initialized.</p></li>
 </ul>
 </section>
-<section id="changed">
-<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h3>Changed<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🆕 <a class="reference internal" href="api.html#adorable.color.Color" title="adorable.color.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">adorable.color.Color</span></code></a> now has
 a more descriptive explanation on how to use
@@ -257,16 +288,16 @@ the <code class="docutils literal notranslate"><span class="pre">__init__</span>
 </ul>
 </section>
 </section>
-<section id="id2">
-<h2>0.0.1 (26-10-2022)<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<section id="id3">
-<h3>Added<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h2>0.0.1 (26-10-2022)<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<section id="id6">
+<h3>Added<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🎉 First stable release.</p></li>
 </ul>
 </section>
-<section id="id4">
-<h3>Changed<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3>Changed<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🔨 <a class="reference internal" href="api.html#adorable.markup.markup_xml" title="adorable.markup.markup_xml"><code class="xref py py-func docutils literal notranslate"><span class="pre">adorable.markup.markup_xml()</span></code></a> now
 raises <code class="docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code> again like in
@@ -277,20 +308,20 @@ that this will be deprecated in a future release.</p></li>
 </section>
 </section>
 <section id="rc2-25-10-2022">
-<h2>0.0.1rc2 (25-10-2022)<a class="headerlink" href="#rc2-25-10-2022" title="Permalink to this heading">#</a></h2>
-<section id="id5">
-<h3>Fixed<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h2>0.0.1rc2 (25-10-2022)<a class="headerlink" href="#rc2-25-10-2022" title="Permalink to this headline">#</a></h2>
+<section id="id8">
+<h3>Fixed<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🐛 Fixed a bug where the short HEX notation
 would sometimes return an incorrect RGB value.</p></li>
 </ul>
 </section>
-<section id="id6">
-<h3>Changed<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3>Changed<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🔨 <a class="reference internal" href="api.html#adorable.markup.markup_xml" title="adorable.markup.markup_xml"><code class="xref py py-func docutils literal notranslate"><span class="pre">adorable.markup.markup_xml()</span></code></a> now
 raises <code class="docutils literal notranslate"><span class="pre">DeprecationWarning</span></code> instead of
-<code class="docutils literal notranslate"><span class="pre">PendingDeprecatipnWarning</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code>.</p></li>
 <li><p>🔨 Improved error message when an invalid
 HEX value is provided in
 <a class="reference internal" href="api.html#adorable.color.Color.from_hex" title="adorable.color.Color.from_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">adorable.color.Color.from_hex()</span></code></a>.</p></li>
@@ -298,9 +329,9 @@ HEX value is provided in
 </section>
 </section>
 <section id="rc1-25-10-2022">
-<h2>0.0.1rc1 (25-10-2022)<a class="headerlink" href="#rc1-25-10-2022" title="Permalink to this heading">#</a></h2>
-<section id="id7">
-<h3>Added<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h2>0.0.1rc1 (25-10-2022)<a class="headerlink" href="#rc1-25-10-2022" title="Permalink to this headline">#</a></h2>
+<section id="id10">
+<h3>Added<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>🎉 First release candidate.</p></li>
 </ul>
@@ -368,24 +399,30 @@ HEX value is provided in
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Changelog</a><ul>
-<li><a class="reference internal" href="#id1">0.1.0 (29-10-2022)</a><ul>
+<li><a class="reference internal" href="#id1">0.1.1 (01-12-2022)</a><ul>
 <li><a class="reference internal" href="#added">Added</a></li>
-<li><a class="reference internal" href="#fixed">Fixed</a></li>
 <li><a class="reference internal" href="#changed">Changed</a></li>
+<li><a class="reference internal" href="#removed">Removed</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id2">0.0.1 (26-10-2022)</a><ul>
+<li><a class="reference internal" href="#id2">0.1.0 (29-10-2022)</a><ul>
 <li><a class="reference internal" href="#id3">Added</a></li>
+<li><a class="reference internal" href="#fixed">Fixed</a></li>
 <li><a class="reference internal" href="#id4">Changed</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id5">0.0.1 (26-10-2022)</a><ul>
+<li><a class="reference internal" href="#id6">Added</a></li>
+<li><a class="reference internal" href="#id7">Changed</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#rc2-25-10-2022">0.0.1rc2 (25-10-2022)</a><ul>
-<li><a class="reference internal" href="#id5">Fixed</a></li>
-<li><a class="reference internal" href="#id6">Changed</a></li>
+<li><a class="reference internal" href="#id8">Fixed</a></li>
+<li><a class="reference internal" href="#id9">Changed</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#rc1-25-10-2022">0.0.1rc1 (25-10-2022)</a><ul>
-<li><a class="reference internal" href="#id7">Added</a></li>
+<li><a class="reference internal" href="#id10">Added</a></li>
 </ul>
 </li>
 </ul>
@@ -402,7 +439,6 @@ HEX value is provided in
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>

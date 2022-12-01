@@ -21,15 +21,15 @@ Table Of Contents
 =================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Quickstart:
+   :maxdepth: 1
+   :caption: Quickstart
    
    installation
    quickstart
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Usage:
+   :maxdepth: 1
+   :caption: Usage
    
    style-string
    creating-color
@@ -38,15 +38,16 @@ Table Of Contents
    api
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Other
    
    why-adorable
    caution-ansi-strings
    glossary
+   show-appreciation
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Library Updates
    
    future

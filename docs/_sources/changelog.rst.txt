@@ -6,6 +6,44 @@ Changelog
    
    Only releases **after** 0.0.1b2 are recorded here.
 
+
+==================
+0.1.1 (01-12-2022)
+==================
+
+-----
+Added
+-----
+
+* |:new:| Added method
+  :meth:`adorable.term.Terminal.is_supported`.
+
+* |:new:| Added method
+  :meth:`adorable.color.Color.is_supported`.
+
+* |:new:| Added ``|`` operator for class
+  :class:`adorable.color.Color`.
+
+
+-------
+Changed
+-------
+
+* |:new:| :meth:`adorable.term.Terminal.get_term`
+  now caches the result.
+
+* |:wastebasket:| :class:`adorable.color.Color` now
+  has the default ``__repr__`` method.
+
+
+-------
+Removed
+-------
+
+* |:wastebasket:| Removed ``BIT4`` value of
+  enum :class:`adorable.term.Terminal`.
+
+
 ==================
 0.1.0 (29-10-2022)
 ==================
@@ -34,7 +72,7 @@ Fixed
 * |:hammer:| Corrected error messages.
 * |:hammer:| Calling
   :meth:`adorable.color.Color.enable_str` and
-  :meth:`adorable.Color.Color.disable_str` now
+  :meth:`adorable.color.Color.disable_str` now
   raise Exceptions when color is not initialized.
 
 
@@ -87,7 +125,7 @@ Changed
 
 * |:hammer:| :func:`adorable.markup.markup_xml` now
   raises ``DeprecationWarning`` instead of
-  ``PendingDeprecatipnWarning``.
+  ``PendingDeprecationWarning``.
 * |:hammer:| Improved error message when an invalid
   HEX value is provided in
   :meth:`adorable.color.Color.from_hex`.

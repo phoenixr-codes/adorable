@@ -27,7 +27,6 @@ adorable.printc("Hello", "World", style = col)
 Links
 -----
 
-[Documentation](https://phoenixr-codes.github.io/adorable)
-
-[Source Code](https://github.com/phoenixr-codes/adorable)
-
+* [Documentation](https://phoenixr-codes.github.io/adorable)
+* [Source Code](https://github.com/phoenixr-codes/adorable)
+* [PyPI](https://pypi.org/project/adorable)

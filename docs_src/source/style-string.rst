@@ -50,7 +50,7 @@ it would be a function.
    from adorable import color
    
    RED = color.from_name("red").fg
-   print(RED("Hello, World!")
+   print(RED("Hello, World!"))
 
 
 .. _using-markup:
@@ -81,6 +81,6 @@ processing.
    
    print(markup_xml("Hello [colorful](RED) World", filter_ansi(locals())))
 
-The above example uses the :func:`filter_ansi` method,
+The above example uses the :func:`adorable.filter_ansi` method,
 however a :ref:`stylesheet` should be used, especially
 for large projects.

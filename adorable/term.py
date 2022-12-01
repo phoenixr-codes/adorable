@@ -10,19 +10,32 @@ import os
 import sys
 from typing import Iterable, Optional, TextIO, Union
 
+
+cache: Optional[Terminal] = None
+"""
+Cache for supported terminal color system.
+"""
+
 class Terminal(IntEnum):
     """
     Enumeration for specifying the color system
     to use.
+    
+    .. versionchanged:: 0.1.1
+        
+        Removed ``BIT4`` value.
     """
     NOCOLOR = auto()
     BIT3 = auto()
-    BIT4 = auto()
     BIT8 = auto()
     BIT24 = auto()
     
     @classmethod
-    def get_term(cls, stream: Optional[Iterable[TextIO]] = None) -> Terminal:
+    def get_term(
+        cls,
+        stream: Optional[Iterable[TextIO]] = None,
+        remember: bool = True,
+    ) -> Terminal:
         """
         Returns the color system that is supported
         by the end user's terminal.
@@ -37,10 +50,23 @@ class Terminal(IntEnum):
         #. Environment variable ``TERM``
         #. Fallback: :attr:`NOCOLOR`
         
+        .. caution::
+            
+            The result of this function will be saved in
+            the ``cache`` variable. The next time this function
+            is called, the result in the cache will be returned
+            if it is not ``None``. You can clear the cache at any
+            time by setting ``cache`` to ``None``::
+                
+                from adorable import term
+                term.cache = None
+            
+            .. versionadded:: 0.1.1
+        
         Parameters
         ----------
         stream
-            The stream to query.
+            The streams to query.
             
             If all of the streams provided are invalid
             terminal, ``RuntimeError`` is raised.
@@ -49,6 +75,11 @@ class Terminal(IntEnum):
             If you want to skip checking for a
             valid terminal you may set this to an empty
             iterable such as ``[]``.
+        
+        remember
+            .. versionadded:: 0.1.1
+            
+            Caches the result.
         
         Examples
         --------
@@ -63,6 +94,11 @@ class Terminal(IntEnum):
         ``RuntimeError``
             Standard output is not a valid terminal.
         """
+        global cache
+        
+        if cache is not None:
+            return cache
+        
         if stream is None:
             stream = [sys.stdout, sys.stderr]
         
@@ -74,25 +110,39 @@ class Terminal(IntEnum):
         
         ac = os.getenv("ADORABLE_COLOR")
         if ac == "nocolor":
-            return cls.NOCOLOR
+            res = cls.NOCOLOR
         
-        if ac == "3bit":
-            return cls.BIT3
+        elif ac == "3bit":
+            res = cls.BIT3
         
-        if ac == "8bit":
-            return cls.BIT8
+        elif ac == "8bit":
+            res = cls.BIT8
         
-        if ac == "24bit":
-            return cls.BIT24
+        elif ac == "24bit":
+            res = cls.BIT24
         
-        if int(os.getenv("NO_COLOR", "0")):
-            return cls.NOCOLOR
+        elif int(os.getenv("NO_COLOR", "0")):
+            res = cls.NOCOLOR
         
-        if os.getenv("COLORTERM", "0") in ["truecolor", "24bit"]:
-            return cls.BIT24
+        elif os.getenv("COLORTERM", "0") in ["truecolor", "24bit"]:
+            res = cls.BIT24
         
-        t = os.getenv("TERM", "").removeprefix("xterm-")
-        if t == "256":
-            return cls.BIT8
+        elif os.getenv("TERM", "").removeprefix("xterm-") == "256":
+            res = cls.BIT8
         
-        return cls.NOCOLOR
+        else:
+            res = cls.NOCOLOR
+        
+        if remember:
+            cache = res
+        return res
+    
+    def is_supported(self) -> bool:
+        """
+        .. versionadded:: 0.1.1
+        
+        Checks if the color system is supported
+        by the terminal.
+        """
+        return self.__class__.get_term() >= self
+

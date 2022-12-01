@@ -5,7 +5,7 @@
 ***
 
 The page you requested was not found. Perhaps
-you misspelled the URL you entered or
+you misspelled the URL you have entered or
 `clicked on a dead link <https://github.com/phoenixr-codes/adorable/issues>`_?
 
 :doc:`Back to landing page <../index>`

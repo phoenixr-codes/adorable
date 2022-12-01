@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Why Use adorable" href="why-adorable.html" /><link rel="prev" title="Color System" href="color-system.html" />
 
-    <meta name="generator" content="sphinx-5.0.2, furo 2022.09.29"/>
-        <title>API - adorable 0.1.0 documentation</title>
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.09.29"/>
+        <title>API - adorable 0.1.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=d81277517bee4d6b0349d71bb2661d4890b5617c" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -126,7 +126,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">adorable 0.1.0 documentation</div></a>
+      <a href="index.html"><div class="brand">adorable 0.1.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -149,7 +149,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">adorable 0.1.0 documentation</span>
+  <span class="sidebar-brand-text">adorable 0.1.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
@@ -157,12 +157,12 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Quickstart:</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Quickstart</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Usage:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="style-string.html">Styling A String</a></li>
 <li class="toctree-l1"><a class="reference internal" href="creating-color.html">Creating Colors</a></li>
@@ -175,6 +175,7 @@
 <li class="toctree-l1"><a class="reference internal" href="why-adorable.html">Why Use adorable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="caution-ansi-strings.html">Caution When Using Ansi Strings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="show-appreciation.html">Show Appreciation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Library Updates</span></p>
 <ul>
@@ -215,9 +216,9 @@
         </div>
         <article role="main">
           <section id="api">
-<h1>API<a class="headerlink" href="#api" title="Permalink to this heading">#</a></h1>
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">#</a></h1>
 <section id="module-adorable">
-<span id="adorable"></span><h2>adorable<a class="headerlink" href="#module-adorable" title="Permalink to this heading">#</a></h2>
+<span id="adorable"></span><h2>adorable<a class="headerlink" href="#module-adorable" title="Permalink to this headline">#</a></h2>
 <dl class="py data">
 <dt class="sig sig-object py" id="adorable.ANSI_REGEX">
 <span class="sig-prename descclassname"><span class="pre">adorable.</span></span><span class="sig-name descname"><span class="pre">ANSI_REGEX</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">re.compile('\x1b\\[.*?[ABCDEFGHJKfnsumlh]')</span></em><a class="headerlink" href="#adorable.ANSI_REGEX" title="Permalink to this definition">#</a></dt>
@@ -231,10 +232,10 @@
 ansi objects are defined in a module so that <code class="docutils literal notranslate"><span class="pre">locals()</span></code>
 or <code class="docutils literal notranslate"><span class="pre">module.__dict__</span></code> can be used.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>style</strong> (<em>Mapping</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>style</strong> (<em>collections.abc.Mapping</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>dict[str, <a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a>]</p>
 </dd>
 </dl>
@@ -242,7 +243,7 @@ or <code class="docutils literal notranslate"><span class="pre">module.__dict__<
 
 </section>
 <section id="module-adorable.color">
-<span id="color"></span><h2>color<a class="headerlink" href="#module-adorable.color" title="Permalink to this heading">#</a></h2>
+<span id="color"></span><h2>color<a class="headerlink" href="#module-adorable.color" title="Permalink to this headline">#</a></h2>
 <p>Utilities for creating color objects.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="adorable.color.Color">
@@ -258,21 +259,38 @@ class methods such as
 <a class="reference internal" href="#adorable.color.from_hex" title="adorable.color.from_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_hex()</span></code></a>.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>data</strong> (<em>Any</em>) – Various metadata set by subclasses
 for internal use.</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color.__or__">
+<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.__or__" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the color that is supported. Returns
+the color with a larger color palette when
+both are supported. Returns the color with a
+smaller color palette when neither is supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="adorable.color.Color.__add__">
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.__add__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines two styles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -282,11 +300,11 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__iadd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.__iadd__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines this and another style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -296,14 +314,14 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to</p></li>
 <li><p><strong>sep</strong> – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
 </dd>
 </dl>
@@ -314,7 +332,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -325,7 +343,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -339,7 +357,22 @@ for internal use.</p>
 </div>
 <p>Checks if the color is initialized or not.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.is_supported" title="Permalink to this definition">#</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+<p>Checks if the color system is supported
+or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -347,13 +380,13 @@ for internal use.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color.fg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color.fg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color.fg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to foreground mode.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color.bg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color.bg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color.bg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to background mode.</p>
 </dd></dl>
 
@@ -363,13 +396,13 @@ for internal use.</p>
 <dd><p>Sets the color to foreground mode and adds
 another color as background mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a>) – Background color to set for this style.
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – Background color to set for this style.
 May already be initialized as background
 mode.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -383,11 +416,11 @@ mode.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>adorable.utils.RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -401,11 +434,11 @@ mode.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -419,11 +452,11 @@ mode.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -433,10 +466,10 @@ mode.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -447,10 +480,10 @@ mode.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -461,11 +494,11 @@ mode.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -484,7 +517,7 @@ class methods such as
 <a class="reference internal" href="#adorable.color.from_hex" title="adorable.color.from_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_hex()</span></code></a>.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>data</strong> (<em>Any</em>) – Various metadata set by subclasses
 for internal use.</p>
 </dd>
@@ -494,11 +527,11 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.__add__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines two styles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -508,14 +541,14 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to</p></li>
 <li><p><strong>sep</strong> – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
 </dd>
 </dl>
@@ -526,18 +559,35 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__iadd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.__iadd__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines this and another style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color0bit.__or__">
+<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.__or__" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the color that is supported. Returns
+the color with a larger color palette when
+both are supported. Returns the color with a
+smaller color palette when neither is supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color0bit.bg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color0bit.bg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color0bit.bg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to background mode.</p>
 </dd></dl>
 
@@ -546,10 +596,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -560,7 +610,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -571,10 +621,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -585,7 +635,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -596,18 +646,18 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color0bit.fg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color0bit.fg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color0bit.fg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to foreground mode.</p>
 </dd></dl>
 
@@ -620,11 +670,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -638,11 +688,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -656,11 +706,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>adorable.utils.RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -673,7 +723,22 @@ for internal use.</p>
 </div>
 <p>Checks if the color is initialized or not.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color0bit.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color0bit.is_supported" title="Permalink to this definition">#</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+<p>Checks if the color system is supported
+or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -685,13 +750,13 @@ for internal use.</p>
 <dd><p>Sets the color to foreground mode and adds
 another color as background mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a>) – Background color to set for this style.
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – Background color to set for this style.
 May already be initialized as background
 mode.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -710,7 +775,7 @@ class methods such as
 <a class="reference internal" href="#adorable.color.from_hex" title="adorable.color.from_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_hex()</span></code></a>.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>data</strong> (<em>Any</em>) – Various metadata set by subclasses
 for internal use.</p>
 </dd>
@@ -720,11 +785,11 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.__add__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines two styles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -734,14 +799,14 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to</p></li>
 <li><p><strong>sep</strong> – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
 </dd>
 </dl>
@@ -752,18 +817,35 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__iadd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.__iadd__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines this and another style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color3bit.__or__">
+<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.__or__" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the color that is supported. Returns
+the color with a larger color palette when
+both are supported. Returns the color with a
+smaller color palette when neither is supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color3bit.bg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color3bit.bg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color3bit.bg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to background mode.</p>
 </dd></dl>
 
@@ -772,10 +854,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -786,7 +868,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -797,10 +879,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -811,7 +893,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -822,18 +904,18 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color3bit.fg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color3bit.fg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color3bit.fg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to foreground mode.</p>
 </dd></dl>
 
@@ -846,11 +928,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -864,11 +946,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -882,11 +964,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>adorable.utils.RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -899,7 +981,22 @@ for internal use.</p>
 </div>
 <p>Checks if the color is initialized or not.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color3bit.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color3bit.is_supported" title="Permalink to this definition">#</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+<p>Checks if the color system is supported
+or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -911,13 +1008,13 @@ for internal use.</p>
 <dd><p>Sets the color to foreground mode and adds
 another color as background mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a>) – Background color to set for this style.
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – Background color to set for this style.
 May already be initialized as background
 mode.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -936,7 +1033,7 @@ class methods such as
 <a class="reference internal" href="#adorable.color.from_hex" title="adorable.color.from_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_hex()</span></code></a>.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>data</strong> (<em>Any</em>) – Various metadata set by subclasses
 for internal use.</p>
 </dd>
@@ -946,11 +1043,11 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.__add__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines two styles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -960,14 +1057,14 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to</p></li>
 <li><p><strong>sep</strong> – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
 </dd>
 </dl>
@@ -978,18 +1075,35 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__iadd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.__iadd__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines this and another style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color8bit.__or__">
+<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.__or__" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the color that is supported. Returns
+the color with a larger color palette when
+both are supported. Returns the color with a
+smaller color palette when neither is supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color8bit.bg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color8bit.bg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color8bit.bg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to background mode.</p>
 </dd></dl>
 
@@ -998,10 +1112,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1012,7 +1126,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1023,10 +1137,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1037,7 +1151,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1048,18 +1162,18 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color8bit.fg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color8bit.fg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color8bit.fg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to foreground mode.</p>
 </dd></dl>
 
@@ -1072,11 +1186,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1090,11 +1204,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1108,11 +1222,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>adorable.utils.RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1125,7 +1239,22 @@ for internal use.</p>
 </div>
 <p>Checks if the color is initialized or not.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color8bit.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color8bit.is_supported" title="Permalink to this definition">#</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+<p>Checks if the color system is supported
+or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -1137,13 +1266,13 @@ for internal use.</p>
 <dd><p>Sets the color to foreground mode and adds
 another color as background mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a>) – Background color to set for this style.
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – Background color to set for this style.
 May already be initialized as background
 mode.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1162,7 +1291,7 @@ class methods such as
 <a class="reference internal" href="#adorable.color.from_hex" title="adorable.color.from_hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">from_hex()</span></code></a>.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>data</strong> (<em>Any</em>) – Various metadata set by subclasses
 for internal use.</p>
 </dd>
@@ -1172,11 +1301,11 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.__add__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines two styles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1186,14 +1315,14 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to</p></li>
 <li><p><strong>sep</strong> – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
 </dd>
 </dl>
@@ -1204,18 +1333,35 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">__iadd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.__iadd__" title="Permalink to this definition">#</a></dt>
 <dd><p>Combines this and another style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color24bit.__or__">
+<span class="sig-name descname"><span class="pre">__or__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.__or__" title="Permalink to this definition">#</a></dt>
+<dd><p>Returns the color that is supported. Returns
+the color with a larger color palette when
+both are supported. Returns the color with a
+smaller color palette when neither is supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color24bit.bg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color24bit.bg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color24bit.bg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to background mode.</p>
 </dd></dl>
 
@@ -1224,10 +1370,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1238,7 +1384,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1249,10 +1395,10 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1263,7 +1409,7 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1274,18 +1420,18 @@ for internal use.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="adorable.color.Color24bit.fg">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">Color</span></a></em><a class="headerlink" href="#adorable.color.Color24bit.fg" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fg</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><span class="pre">adorable.color.Color</span></a></em><a class="headerlink" href="#adorable.color.Color24bit.fg" title="Permalink to this definition">#</a></dt>
 <dd><p>Sets the color to foreground mode.</p>
 </dd></dl>
 
@@ -1298,11 +1444,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1316,11 +1462,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1334,11 +1480,11 @@ for internal use.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>adorable.utils.RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1351,7 +1497,22 @@ for internal use.</p>
 </div>
 <p>Checks if the color is initialized or not.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.color.Color24bit.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.Color24bit.is_supported" title="Permalink to this definition">#</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+<p>Checks if the color system is supported
+or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
@@ -1363,13 +1524,13 @@ for internal use.</p>
 <dd><p>Sets the color to foreground mode and adds
 another color as background mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a>) – Background color to set for this style.
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>adorable.color.Color</em></a>) – Background color to set for this style.
 May already be initialized as background
 mode.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1380,7 +1541,7 @@ mode.</p>
 <dt class="sig sig-object py" id="adorable.color.get_color">
 <span class="sig-prename descclassname"><span class="pre">adorable.color.</span></span><span class="sig-name descname"><span class="pre">get_color</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.color.get_color" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>type[<a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a>]</p>
 </dd>
 </dl>
@@ -1395,14 +1556,14 @@ mode.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1416,14 +1577,14 @@ mode.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1437,14 +1598,14 @@ mode.</p>
 <p><a class="reference internal" href="creating-color.html"><span class="doc">Creating Colors</span></a></p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color">adorable.color.Color</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1457,27 +1618,27 @@ mode.</p>
 </div>
 <p>Returns a new instance of <a class="reference internal" href="#adorable.color.Color0bit" title="adorable.color.Color0bit"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color0bit</span></code></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#adorable.color.Color0bit" title="adorable.color.Color0bit"><em>Color0bit</em></a></p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#adorable.color.Color0bit" title="adorable.color.Color0bit">adorable.color.Color0bit</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 </section>
 <section id="module-adorable.markup">
-<span id="markup"></span><h2>markup<a class="headerlink" href="#module-adorable.markup" title="Permalink to this heading">#</a></h2>
+<span id="markup"></span><h2>markup<a class="headerlink" href="#module-adorable.markup" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="adorable.markup.insert">
 <span class="sig-prename descclassname"><span class="pre">adorable.markup.</span></span><span class="sig-name descname"><span class="pre">insert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.markup.insert" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">args</span></code> and <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> as is.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>tuple[tuple[<em>Any</em>, …], dict[str, <em>Any</em>]]</p>
 </dd>
 </dl>
@@ -1499,7 +1660,7 @@ is added at the end. You can also use <code class="docutils literal notranslate"
 to explicitly specify that the variable
 has to be escaped.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>string</strong> (<em>str</em>) – The markup text.</p></li>
 <li><p><strong>style</strong> (<em>Optional</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a><em>]</em><em>]</em>) – Mapping of keys and the style to use.
@@ -1513,7 +1674,7 @@ You may want to use
 </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>Styled text.</p>
 </dd>
 </dl>
@@ -1521,7 +1682,7 @@ You may want to use
 
 </section>
 <section id="module-adorable.stylesheet">
-<span id="stylesheet"></span><h2>stylesheet<a class="headerlink" href="#module-adorable.stylesheet" title="Permalink to this heading">#</a></h2>
+<span id="stylesheet"></span><h2>stylesheet<a class="headerlink" href="#module-adorable.stylesheet" title="Permalink to this headline">#</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">New in version 0.1.0.</span></p>
 </div>
@@ -1532,10 +1693,10 @@ your project.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.stylesheet.</span></span><span class="sig-name descname"><span class="pre">remove_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.stylesheet.remove_style" title="Permalink to this definition">#</a></dt>
 <dd><p>Removes a style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the style object.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1546,7 +1707,7 @@ your project.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.stylesheet.</span></span><span class="sig-name descname"><span class="pre">remove_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.stylesheet.remove_all" title="Permalink to this definition">#</a></dt>
 <dd><p>Removes all styles.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
 </dl>
@@ -1569,10 +1730,10 @@ available.</p>
 rather raise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>styles</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – Ansi objects and an associated name.</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>styles</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – Ansi objects and an associated name.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1594,9 +1755,9 @@ module and use it as the <code class="docutils literal notranslate"><span class=
 be used which is also safe.</p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>Path</em><em>, </em><em>module</em><em>, </em><em>str</em><em>]</em><em>]</em>) – <p>When a <code class="docutils literal notranslate"><span class="pre">Path</span></code> or <code class="docutils literal notranslate"><span class="pre">str</span></code> is given, it
+<li><p><strong>source</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>pathlib.Path</em><em>, </em><em>module</em><em>, </em><em>str</em><em>]</em><em>]</em>) – <p>When a <code class="docutils literal notranslate"><span class="pre">Path</span></code> or <code class="docutils literal notranslate"><span class="pre">str</span></code> is given, it
 will load all style objects from that file
 by importing it. If the path is a directory
 it will try to find a file named <code class="docutils literal notranslate"><span class="pre">_stylesheet.py</span></code>
@@ -1625,10 +1786,10 @@ previously had. Forcing a rerun may be done by
 setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dt class="field-even">Raises</dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> – Could not find source file.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>None</p>
 </dd>
 </dl>
@@ -1636,14 +1797,23 @@ setting this to <code class="docutils literal notranslate"><span class="pre">Tru
 
 </section>
 <section id="module-adorable.term">
-<span id="term"></span><h2>term<a class="headerlink" href="#module-adorable.term" title="Permalink to this heading">#</a></h2>
+<span id="term"></span><h2>term<a class="headerlink" href="#module-adorable.term" title="Permalink to this headline">#</a></h2>
 <p>Utilities for working with the terminal color
 system.</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="adorable.term.cache">
+<span class="sig-prename descclassname"><span class="pre">adorable.term.</span></span><span class="sig-name descname"><span class="pre">cache</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#adorable.term.Terminal" title="adorable.term.Terminal"><span class="pre">adorable.term.Terminal</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#adorable.term.cache" title="Permalink to this definition">#</a></dt>
+<dd><p>Cache for supported terminal color system.</p>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="adorable.term.Terminal">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">adorable.term.</span></span><span class="sig-name descname"><span class="pre">Terminal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.term.Terminal" title="Permalink to this definition">#</a></dt>
 <dd><p>Enumeration for specifying the color system
 to use.</p>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 0.1.1: </span>Removed <code class="docutils literal notranslate"><span class="pre">BIT4</span></code> value.</p>
+</div>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="adorable.term.Terminal.NOCOLOR">
 <span class="sig-name descname"><span class="pre">NOCOLOR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#adorable.term.Terminal.NOCOLOR" title="Permalink to this definition">#</a></dt>
@@ -1655,23 +1825,18 @@ to use.</p>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="adorable.term.Terminal.BIT4">
-<span class="sig-name descname"><span class="pre">BIT4</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#adorable.term.Terminal.BIT4" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="adorable.term.Terminal.BIT8">
-<span class="sig-name descname"><span class="pre">BIT8</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#adorable.term.Terminal.BIT8" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BIT8</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#adorable.term.Terminal.BIT8" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="adorable.term.Terminal.BIT24">
-<span class="sig-name descname"><span class="pre">BIT24</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#adorable.term.Terminal.BIT24" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">BIT24</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#adorable.term.Terminal.BIT24" title="Permalink to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="adorable.term.Terminal.get_term">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.term.Terminal.get_term" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_term</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remember</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.term.Terminal.get_term" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns the color system that is supported
 by the end user’s terminal.</p>
 <p>The color system is checked in the
@@ -1684,19 +1849,41 @@ following order:</p>
 <li><p>Environment variable <code class="docutils literal notranslate"><span class="pre">TERM</span></code></p></li>
 <li><p>Fallback: <a class="reference internal" href="#adorable.term.Terminal.NOCOLOR" title="adorable.term.Terminal.NOCOLOR"><code class="xref py py-attr docutils literal notranslate"><span class="pre">NOCOLOR</span></code></a></p></li>
 </ol>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The result of this function will be saved in
+the <code class="docutils literal notranslate"><span class="pre">cache</span></code> variable. The next time this function
+is called, the result in the cache will be returned
+if it is not <code class="docutils literal notranslate"><span class="pre">None</span></code>. You can clear the cache at any
+time by setting <code class="docutils literal notranslate"><span class="pre">cache</span></code> to <code class="docutils literal notranslate"><span class="pre">None</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">adorable</span> <span class="kn">import</span> <span class="n">term</span>
+<span class="n">term</span><span class="o">.</span><span class="n">cache</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>stream</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>TextIO</em><em>]</em><em>]</em>) – <p>The stream to query.</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stream</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>TextIO</em><em>]</em><em>]</em>) – <p>The streams to query.</p>
 <p>If all of the streams provided are invalid
 terminal, <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> is raised.
 Defaults to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> and <code class="docutils literal notranslate"><span class="pre">stderr</span></code>.</p>
 <p>If you want to skip checking for a
 valid terminal you may set this to an empty
 iterable such as <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p>
-</p>
+</p></li>
+<li><p><strong>remember</strong> (<em>bool</em>) – <div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+<p>Caches the result.</p>
+</p></li>
+</ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.term.Terminal" title="adorable.term.Terminal"><em>Terminal</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.term.Terminal" title="adorable.term.Terminal">adorable.term.Terminal</a></p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
@@ -1706,14 +1893,32 @@ iterable such as <code class="docutils literal notranslate"><span class="pre">[]
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dt class="field-odd">Raises</dt>
 <dd class="field-odd"><p><strong>RuntimeError</strong> – Standard output is not a valid terminal.</p>
 </dd>
-<dt class="field-even">Parameters<span class="colon">:</span></dt>
-<dd class="field-even"><p><strong>stream</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>TextIO</em><em>]</em><em>]</em>) – </p>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>stream</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>TextIO</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>remember</strong> (<em>bool</em>) – </p></li>
+</ul>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#adorable.term.Terminal" title="adorable.term.Terminal"><em>Terminal</em></a></p>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#adorable.term.Terminal" title="adorable.term.Terminal">adorable.term.Terminal</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.term.Terminal.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.term.Terminal.is_supported" title="Permalink to this definition">#</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">New in version 0.1.1.</span></p>
+</div>
+<p>Checks if the color system is supported
+by the terminal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1722,21 +1927,21 @@ iterable such as <code class="docutils literal notranslate"><span class="pre">[]
 
 </section>
 <section id="module-adorable.ansi">
-<span id="ansi"></span><h2>ansi<a class="headerlink" href="#module-adorable.ansi" title="Permalink to this heading">#</a></h2>
+<span id="ansi"></span><h2>ansi<a class="headerlink" href="#module-adorable.ansi" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="adorable.ansi.paint">
 <span class="sig-prename descclassname"><span class="pre">adorable.ansi.</span></span><span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.paint" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to style. The <code class="docutils literal notranslate"><span class="pre">str()</span></code> function will
 be called on each object.</p></li>
-<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em>]</em>) – Ansi object that styles the string.</p></li>
+<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a><em>]</em>) – Ansi object that styles the string.</p></li>
 <li><p><strong>sep</strong> (<em>str</em>) – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
 </dd>
 </dl>
@@ -1747,14 +1952,14 @@ be called on each object.</p></li>
 <span class="sig-prename descclassname"><span class="pre">adorable.ansi.</span></span><span class="sig-name descname"><span class="pre">formatc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.formatc" title="Permalink to this definition">#</a></dt>
 <dd><p>Alias of <a class="reference internal" href="#adorable.ansi.paint" title="adorable.ansi.paint"><code class="xref py py-func docutils literal notranslate"><span class="pre">paint()</span></code></a>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
-<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em>]</em>) – </p></li>
+<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a><em>]</em>) – </p></li>
 <li><p><strong>sep</strong> (<em>str</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -1768,14 +1973,14 @@ be called on each object.</p></li>
 built-in print function. It also provides
 an extra parameter.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Positional arguments passed to <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">print</a></p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – Keyword arguments passed to <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">print</a></p></li>
 <li><p><strong>style</strong> – Ansi objects that styles the string.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1789,15 +1994,43 @@ an extra parameter.</p>
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to</p></li>
 <li><p><strong>sep</strong> – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.ansi.Ansi.__add__">
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.__add__" title="Permalink to this definition">#</a></dt>
+<dd><p>Combines two styles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.ansi.Ansi.__iadd__">
+<span class="sig-name descname"><span class="pre">__iadd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.__iadd__" title="Permalink to this definition">#</a></dt>
+<dd><p>Combines this and another style.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1807,11 +2040,11 @@ an extra parameter.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1821,7 +2054,7 @@ an extra parameter.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1832,10 +2065,10 @@ an extra parameter.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1846,7 +2079,7 @@ an extra parameter.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1857,10 +2090,10 @@ an extra parameter.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.Ansi.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1886,21 +2119,52 @@ no data.</p>
 </pre></div>
 </div>
 <dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.ansi.AnsiNull.__add__">
+<span class="sig-name descname"><span class="pre">__add__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.__add__" title="Permalink to this definition">#</a></dt>
+<dd><p>Combines two styles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="adorable.ansi.AnsiNull.__call__">
 <span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.__call__" title="Permalink to this definition">#</a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to</p></li>
 <li><p><strong>sep</strong> – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>The styled string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="adorable.ansi.AnsiNull.__iadd__">
+<span class="sig-name descname"><span class="pre">__iadd__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.__iadd__" title="Permalink to this definition">#</a></dt>
+<dd><p>Combines this and another style.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>other</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1910,10 +2174,10 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1924,7 +2188,7 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1935,10 +2199,10 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -1949,7 +2213,7 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -1960,11 +2224,11 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.ansi.AnsiNull.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1973,13 +2237,13 @@ no data.</p>
 
 </section>
 <section id="module-adorable.style">
-<span id="style"></span><h2>style<a class="headerlink" href="#module-adorable.style" title="Permalink to this heading">#</a></h2>
+<span id="style"></span><h2>style<a class="headerlink" href="#module-adorable.style" title="Permalink to this headline">#</a></h2>
 <p>Common ansi styles.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="adorable.style.Style">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">Style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.style.Style" title="Permalink to this definition">#</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>enable</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>disable</strong> (<em>Any</em>) – </p></li>
@@ -1991,10 +2255,10 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.style.Style.disable" title="Permalink to this definition">#</a></dt>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -2005,7 +2269,7 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">disable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.style.Style.disable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to disable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -2016,10 +2280,10 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.style.Style.enable" title="Permalink to this definition">#</a></dt>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>None</p>
 </dd>
 </dl>
@@ -2030,7 +2294,7 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">enable_str</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#adorable.style.Style.enable_str" title="Permalink to this definition">#</a></dt>
 <dd><p>Returns escape sequence to enable the ansi style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
@@ -2041,11 +2305,11 @@ no data.</p>
 <span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">others</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adorable.style.Style.extend" title="Permalink to this definition">#</a></dt>
 <dd><p>Adds other ansi styles to this style.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a>) – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>others</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a>) – </p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a></p>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi">adorable.ansi.Ansi</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -2057,13 +2321,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">BOLD</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.BOLD" title="Permalink to this definition">#</a></dt>
 <dd><p>Bold style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2074,13 +2338,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">DIM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.DIM" title="Permalink to this definition">#</a></dt>
 <dd><p>Dim style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2091,13 +2355,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">ITALIC</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.ITALIC" title="Permalink to this definition">#</a></dt>
 <dd><p>Italic style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2108,13 +2372,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">UNDERLINE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.UNDERLINE" title="Permalink to this definition">#</a></dt>
 <dd><p>Underline style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2125,13 +2389,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">BLINK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.BLINK" title="Permalink to this definition">#</a></dt>
 <dd><p>Blink style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2142,13 +2406,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">INVERSE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.INVERSE" title="Permalink to this definition">#</a></dt>
 <dd><p>Inverse style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2159,13 +2423,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">INVISIBLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.INVISIBLE" title="Permalink to this definition">#</a></dt>
 <dd><p>Invisible style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2176,13 +2440,13 @@ no data.</p>
 <span class="sig-prename descclassname"><span class="pre">adorable.style.</span></span><span class="sig-name descname"><span class="pre">STRIKETHROUGH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;adorable.style.Style</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#adorable.style.STRIKETHROUGH" title="Permalink to this definition">#</a></dt>
 <dd><p>Strike through style</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
 <li><p><strong>kwargs</strong> (<em>Any</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
@@ -2280,7 +2544,6 @@ no data.</p>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
