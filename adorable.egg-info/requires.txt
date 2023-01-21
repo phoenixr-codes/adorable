@@ -1,0 +1,9 @@
+
+[docs]
+furo>=2022.9.15
+Sphinx>=5.0.0
+sphinx_copybutton
+sphinx_inline_tabs
+sphinxcontrib-repl
+sphinxcontrib-spelling
+sphinxemoji

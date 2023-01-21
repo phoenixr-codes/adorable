@@ -5,6 +5,8 @@ system.
 
 from __future__ import annotations
 
+__all__ = ["Terminal"]
+
 from enum import auto, IntEnum
 import os
 import sys
@@ -18,12 +20,11 @@ Cache for supported terminal color system.
 
 class Terminal(IntEnum):
     """
+    .. versionchanged:: 0.1.1
+        Removed ``BIT4`` value.
+    
     Enumeration for specifying the color system
     to use.
-    
-    .. versionchanged:: 0.1.1
-        
-        Removed ``BIT4`` value.
     """
     NOCOLOR = auto()
     BIT3 = auto()

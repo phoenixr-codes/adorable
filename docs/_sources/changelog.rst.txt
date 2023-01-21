@@ -8,6 +8,29 @@ Changelog
 
 
 ==================
+0.1.2 (21-01-2023)
+==================
+
+-----
+Added
+-----
+
+* |:new:| Added function :func:`adorable.use`.
+
+
+-------
+Changed
+-------
+
+* |:hammer:| Fixed an issue where multiple 8bit
+  colors could not be created.
+
+* |:hammer:| Calling ``__str__()`` on a
+  :class:`adorable.color.Color`` object will now
+  actually throw a warning and return an empty
+  string when the color is not initialized.
+
+==================
 0.1.1 (01-12-2022)
 ==================
 

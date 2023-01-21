@@ -1,12 +1,15 @@
 ansi
+byteorder
 changelog
 iterable
 prereleases
 quickstart
 rc
+representable
 stylesheet
 stylesheets
 subclass
 subclasses
+sys
 todo
 utils

@@ -115,7 +115,7 @@ class Color(Ansi, metaclass = ABCMeta):
         self._ground: _Ground = _Ground.NONE
     
     def __str__(self) -> str:
-        if not self.is_initialized:
+        if not self.is_initialized():
             warnings.warn(
                 f"{self.__class__.__name__} instance at {hex(id(self))} is not initialized. "
                 "Use `.bg`, `.fg` or `.on()` to initialize it.",
@@ -307,11 +307,11 @@ class Color(Ansi, metaclass = ABCMeta):
            
            :doc:`Creating Colors <creating-color>`
         """
-        values = []
+        values: list[int] = []
         for i in rgb:
             if isinstance(i, float):
-                i *= 255
-            values.append(round(i))
+                i = round(i * 255)
+            values.append(i)
         
         return cls._from_rgb(values) # type: ignore
     
@@ -393,7 +393,7 @@ class Color3bit(Color):
     @classmethod
     def _from_rgb(cls, rgb: T_RGB) -> Color3bit:
         color: int = _get_closest_color(RGB(*rgb), enumerate(_palette.ANSI3BIT))
-        return cls(ansi = color)
+        return cls(ansi = color, rgb = rgb)
 
 class Color8bit(Color):
     _termtype: Terminal = Terminal.BIT8
@@ -413,7 +413,7 @@ class Color8bit(Color):
     @classmethod
     def _from_rgb(cls, rgb: T_RGB) -> Color8bit:
         color: int = _get_closest_color(RGB(*rgb), enumerate(_palette.ANSI8BIT))
-        return cls(ansi = color)
+        return cls(ansi = color, rgb = rgb)
 
 class Color24bit(Color):
     _termtype: Terminal = Terminal.BIT24

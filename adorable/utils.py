@@ -16,7 +16,10 @@ if TYPE_CHECKING:
 RGB = namedtuple("RGB", "r g b")
 
 T = TypeVar("T")
+
 T_RGB = Union[tuple[int, int, int], RGB]
+T_HLS = tuple[float, float, float]
+
 HEX = Union[str, int]
 
 

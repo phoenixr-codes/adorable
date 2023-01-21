@@ -37,7 +37,7 @@ extensions = [
     
     'sphinx_copybutton',
     'sphinx_inline_tabs',
-    'sphinxcontrib_repl',
+    'sphinxcontrib.repl',
     'sphinxcontrib.spelling',
     'sphinxemoji.sphinxemoji',
     
@@ -66,6 +66,11 @@ autodoc_default_options = dict.fromkeys('''
 autodoc_member_order = 'bysource'
 autodoc_typehints = 'description'
 autoclass_content = 'both'
+
+####################
+# Repl Configuration
+
+repl_mpl_disable = True
 
 
 ########################
@@ -113,4 +118,5 @@ html_theme_options = {
         }
     ]
 }
+
 

@@ -87,4 +87,10 @@ where ``xyz`` is one of:
 * ``8bit``
 * ``24bit``
 
+Alternatively you may use the :func:`adorable.use`
+function. It works similar to setting the environment
+variable::
+    
+    import adorable
+    adorable.use("BIT3") # or: "NOCOLOR", "BIT8", "BIT24"
 

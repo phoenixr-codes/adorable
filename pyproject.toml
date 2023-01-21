@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "adorable"
-version = "0.1.1"
+version = "0.1.2"
 description = "Make Text Adorable"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 dependencies = []
 keywords = [
     "ansi",
@@ -32,6 +32,7 @@ classifiers = [
 [project.optional-dependencies]
 docs = [
     "furo>=2022.9.15",
+    #"matplotlib",
     "Sphinx>=5.0.0",
     "sphinx_copybutton",
     "sphinx_inline_tabs",

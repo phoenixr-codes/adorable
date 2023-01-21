@@ -1,3 +1,13 @@
+"""
+Markup utilities for adorable.
+
+.. warning::
+   
+   Using XML for markup is likely going to be replaced in the
+   future by a more friendly optimized markup language.
+
+"""
+
 from __future__ import annotations
 
 __all__ = ["insert", "markup_xml"]

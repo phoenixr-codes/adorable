@@ -17,7 +17,7 @@ ANSI3BIT = list(starmap(RGB, [
 ]))
 
 
-ANSI8BIT = starmap(RGB, [
+ANSI8BIT = list(starmap(RGB, [
     (0,0,0),
     (128,0,0),
     (0,128,0),
@@ -274,4 +274,4 @@ ANSI8BIT = starmap(RGB, [
     (218,218,218),
     (228,228,228),
     (238,238,238)
-])
+]))

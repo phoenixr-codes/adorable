@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: adorable
+Version: 0.1.2
+Summary: Make Text Adorable
+License: MIT License
+Project-URL: Documentation, https://phoenixr-codes.github.io/adorable/
+Project-URL: Source Code, https://github.com/phoenixr-codes/adorable/
+Keywords: ansi,color,colour,console,style,terminal
+Classifier: Development Status :: 6 - Mature
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Text Processing
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+License-File: LICENSE
+
+adorable
+========
+
+Make the UI of your project **adorable**.
+
+
+Basic Usage
+-----------
+
+```python
+import adorable
+from adorable import color
+
+RED = color.from_name("red")
+print(RED.fg("Hello adorable World"))
+
+
+BLUE = color.from_hex(0x0AF)
+DARK = color.from_rgb((38, 38, 38))
+col = BLUE.on(DARK)
+
+adorable.printc("Hello", "World", style = col)
+
+```
+
+
+Links
+-----
+
+* [Documentation](https://phoenixr-codes.github.io/adorable)
+* [Source Code](https://github.com/phoenixr-codes/adorable)
+* [PyPI](https://pypi.org/project/adorable)
