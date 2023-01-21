@@ -6,6 +6,17 @@ Changelog
    
    Only releases **after** 0.0.1b2 are recorded here.
 
+==================
+0.1.3 (21-01-2023)
+==================
+
+-------
+Changed
+-------
+
+* |:hammer:| Increased quality of detection
+  for color system.
+
 
 ==================
 0.1.2 (21-01-2023)
@@ -25,7 +36,7 @@ Changed
 * |:hammer:| Fixed an issue where multiple 8bit
   colors could not be created.
 
-* |:hammer:| Calling ``__str__()`` on a
+* |:hammer:| Calling ``str()`` on a
   :class:`adorable.color.Color`` object will now
   actually throw a warning and return an empty
   string when the color is not initialized.

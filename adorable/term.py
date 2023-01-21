@@ -128,7 +128,7 @@ class Terminal(IntEnum):
         elif os.getenv("COLORTERM", "0") in ["truecolor", "24bit"]:
             res = cls.BIT24
         
-        elif os.getenv("TERM", "").removeprefix("xterm-") == "256":
+        elif os.getenv("TERM", "").removeprefix("xterm-").removesuffix("color") == "256":
             res = cls.BIT8
         
         else:

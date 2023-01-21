@@ -8,14 +8,14 @@ ERROR += adorable.BOLD
 
 print(ERROR("an error occured"))
 
-c = adorable.Color4bit.from_name("yellow")
+c = adorable.Color3bit.from_name("yellow")
 #c |= adorable.Color8bit.from_name("red")
 
 print(c.fg("Hello World"))
 
 
 doc = "A {!r} Hello {} <red>W<b>or</b>ld</red>"
-print(adorable.markup(
+print(adorable.markup_xml(
     doc,
     style = dict(
         b = adorable.BOLD,
@@ -27,11 +27,11 @@ print(adorable.markup(
     )
 ))
 
-print(adorable.markup(
-    "Hello {!e} <{abc!r}>mhh</RED>",
+print(adorable.markup_xml(
+    "Hello {!e} <{abc!r}>World</RED>",
     adorable.filter_ansi(locals()),
     adorable.insert(
-        "while",
+        "there",
         abc = "RED"
     )
 ))
