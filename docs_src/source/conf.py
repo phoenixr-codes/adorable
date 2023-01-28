@@ -44,11 +44,14 @@ extensions = [
     'colored',
 ]
 
-extlinks = {
-    'pylib': ('https://docs.python.org/3/library/%s.html', '%s'),
-    'pyfn': ('https://docs.python.org/3/library/functions.html#%s', '%s'),
-    'piplib': ('https://pypi.org/project/%s', '%s')
-}
+extlinks = dict(
+    pylib = ('https://docs.python.org/3/library/%s.html', '%s'),
+    pyfn = ('https://docs.python.org/3/library/functions.html#%s', '%s'),
+    piplib = ('https://pypi.org/project/%s', '%s')
+)
+
+####################
+# TODO Configuration
 
 todo_include_todos = True
 todo_emit_warnings = True
@@ -68,7 +71,7 @@ autodoc_typehints = 'description'
 autoclass_content = 'both'
 
 ####################
-# Repl Configuration
+# REPL Configuration
 
 repl_mpl_disable = True
 
