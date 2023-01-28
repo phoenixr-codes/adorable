@@ -9,16 +9,14 @@ from collections.abc import Callable
 from copy import copy
 from enum import auto, IntEnum
 import operator
-from typing import Any, Sequence, Union
+from typing import Any, Union
 import warnings
 
 from . import _palette
 from . import webcolors
 from .ansi import Ansi, _get_ansi_string, paint
-from .style import Style
 from .term import Terminal
 from .utils import _copydoc, _get_closest_color,  RGB, HEX, T_RGB
-
 
 
 _NOT_INITIALIZED: str = "color not initialized"
@@ -67,7 +65,7 @@ class _Ground(IntEnum):
         ``_GroundError``
             The comparison returned ``False``.
         """
-        msg = "invalid ground set" # in case a string is missing
+        msg = "invalid ground set"  # in case a string is missing
         for check in checks:
             args: list[int] = []
             for arg in check[1:]:
@@ -81,7 +79,10 @@ class _Ground(IntEnum):
                     args.append(arg)
                 
                 else:
-                    raise TypeError(f"expected 'Color', 'int' or 'str', got {arg.__class__.__name__!r}")
+                    raise TypeError(
+                        "expected 'Color', 'int' or 'str', "
+                        f"got {arg.__class__.__name__!r}"
+                    )
             
             if not check[0](*args):
                 raise _GroundError(msg)
@@ -117,8 +118,9 @@ class Color(Ansi, metaclass = ABCMeta):
     def __str__(self) -> str:
         if not self.is_initialized():
             warnings.warn(
-                f"{self.__class__.__name__} instance at {hex(id(self))} is not initialized. "
-                "Use `.bg`, `.fg` or `.on()` to initialize it.",
+                f"{self.__class__.__name__} instance at "
+                f"{hex(id(self))} is not initialized. Use "
+                "`.bg`, `.fg` or `.on()` to initialize it.",
                 RuntimeWarning
             )
             return ""
@@ -281,7 +283,7 @@ class Color(Ansi, metaclass = ABCMeta):
             mode.
         """
         _Ground.check((
-            lambda a, b, back, fore: a != back and b != fore, # type: ignore
+            lambda a, b, back, fore: a != back and b != fore,  # type: ignore
             self, other, _Ground.BACK, _Ground.FORE,
             "second color must not be set to background"
         ))
@@ -313,7 +315,7 @@ class Color(Ansi, metaclass = ABCMeta):
                 i = round(i * 255)
             values.append(i)
         
-        return cls._from_rgb(values) # type: ignore
+        return cls._from_rgb(values)  # type: ignore
     
     @classmethod
     def from_name(cls, name: str) -> Color:
@@ -358,14 +360,14 @@ class Color(Ansi, metaclass = ABCMeta):
         
         elif len(hex) != 6:
             raise ValueError(
-                f"hex value should consist of 3 or 6 characters "
+                "hex value should consist of 3 or 6 characters "
                 "(e. g. `0xFFFFFF` or `0xFFF`)"
             )
         
         h = iter(hex)
         
         rgb = [int(char, 16) * 16 + int(next(h), 16) for char in h]
-        return cls.from_rgb(rgb) # type: ignore
+        return cls.from_rgb(rgb)  # type: ignore
 
 class Color0bit(Color):
     _termtype: Terminal = Terminal.NOCOLOR
@@ -392,7 +394,10 @@ class Color3bit(Color):
     
     @classmethod
     def _from_rgb(cls, rgb: T_RGB) -> Color3bit:
-        color: int = _get_closest_color(RGB(*rgb), enumerate(_palette.ANSI3BIT))
+        color: int = _get_closest_color(
+            RGB(*rgb),
+            enumerate(_palette.ANSI3BIT)
+        )
         return cls(ansi = color, rgb = rgb)
 
 class Color8bit(Color):
@@ -412,7 +417,10 @@ class Color8bit(Color):
     
     @classmethod
     def _from_rgb(cls, rgb: T_RGB) -> Color8bit:
-        color: int = _get_closest_color(RGB(*rgb), enumerate(_palette.ANSI8BIT))
+        color: int = _get_closest_color(
+            RGB(*rgb),
+            enumerate(_palette.ANSI8BIT)
+        )
         return cls(ansi = color, rgb = rgb)
 
 class Color24bit(Color):
@@ -436,12 +444,11 @@ class Color24bit(Color):
 
 def get_color() -> type[Color]:
     t = Terminal.get_term([])
-    
     for colortype in [Color0bit, Color3bit, Color8bit, Color24bit]:
         if colortype._termtype == t:
             return colortype
     
-    return Color0bit # unreachable
+    return Color0bit  # unreachable
 
 @_copydoc(Color.from_hex)
 def from_hex(*args: Any, **kwargs: Any) -> Color:

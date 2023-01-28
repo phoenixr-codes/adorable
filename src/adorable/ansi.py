@@ -35,11 +35,14 @@ def paint(*args: Any, style: Optional[Ansi] = None, sep: str = " ") -> str:
         return content
     
     elif not isinstance(style, Ansi):
-        raise TypeError(f"expected `None` or `Ansi` for argument `style`, got {style.__class__.__name__}")
+        raise TypeError(
+            "expected `None` or `Ansi` for argument `style`, "
+            f"got {style.__class__.__name__}"
+        )
     
     return f"{style}{content}{style.disable_str()}"
 
-formatc = paint
+formatc = paint  # noqa: E305
 """Alias of :func:`paint`."""
 
 def printc(*args: Any, **kwargs: Any) -> None:
@@ -67,9 +70,7 @@ def printc(*args: Any, **kwargs: Any) -> None:
         if key in kwargs:
             paint_kwargs[key] = kwargs.pop(key)
     
-    print(paint(*args,
-        **paint_kwargs
-    ), **kwargs)
+    print(paint(*args, **paint_kwargs), **kwargs)
 
 
 class Ansi(ABC):
@@ -79,7 +80,9 @@ class Ansi(ABC):
     def __str__(self) -> str:
         return self.enable_str()
     
-    @_copydoc(paint, replace = {re.compile("style.+?the string.", re.DOTALL): ""})
+    @_copydoc(paint, replace = {
+        re.compile("style.+?the string.", re.DOTALL): ""
+    })
     def __call__(self, *args: Any, **kwargs: Any) -> str:
         return paint(*args, style = self, **kwargs)
     

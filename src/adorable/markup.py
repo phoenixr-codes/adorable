@@ -161,7 +161,8 @@ def markup_xml(
     Styled text.
     """
     warnings.warn(
-        "XML markup is likely going to be replaced by another markup language in the future",
+        "XML markup is likely going to be replaced by "
+        "another markup language in the future",
         PendingDeprecationWarning,
     )
     

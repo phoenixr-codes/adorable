@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "adorable"
-version = "0.1.3"
+version = "0.1.3.post1"
 description = "Make Text Adorable"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -30,6 +30,11 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "tox",
+]
 docs = [
     "furo>=2022.9.15",
     "Sphinx>=5.0.0",
@@ -44,9 +49,6 @@ docs = [
 "Documentation" = "https://phoenixr-codes.github.io/adorable/"
 "Source Code" = "https://github.com/phoenixr-codes/adorable/"
 
-[tool.setuptools]
-packages = ["adorable"]
-
 [tool.mypy]
 disallow_untyped_defs = true
 disallow_incomplete_defs = true
@@ -54,4 +56,7 @@ check_untyped_defs = true
 
 no_implicit_optional = true
 warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 

@@ -5,9 +5,9 @@ Load ansi objects from a stylesheet file in
 your project.
 """
 
-#? What if another library imports a library
-#  that has a stylesheet? Maybe add check for
-#  a package or some kind of labeling.
+# TODO: What if another library imports a library
+#       that has a stylesheet? Maybe add check for
+#       a package or some kind of labeling.
 
 from __future__ import annotations
 
@@ -68,7 +68,10 @@ def export(**styles: Ansi) -> None:
     """
     for name, ansi in styles.items():
         if not isinstance(ansi, Ansi):
-            raise TypeError(f"{name!r} ({ansi!r}) is not an instance of {Ansi!r}")
+            raise TypeError(
+                f"{name!r} ({ansi!r}) is not an "
+                f"instance of {Ansi!r}"
+            )
         _globals[name] = ansi
 
 @cache
@@ -187,5 +190,5 @@ def load_stylesheet(
             objects[name] = source.__dict__[name]
     
     export(**filter_ansi(objects))
-    _loaded = source
-    
+    _loaded.add(source)
+

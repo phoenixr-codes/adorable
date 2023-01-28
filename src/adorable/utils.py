@@ -8,10 +8,8 @@ from collections import namedtuple
 from collections.abc import Callable, Iterable, Mapping
 from math import sqrt
 import re
-from typing import Any, Optional, TYPE_CHECKING, TypeVar, Union
+from typing import Any, Optional, TypeVar, Union
 
-if TYPE_CHECKING:
-    from .ansi import Ansi
 
 RGB = namedtuple("RGB", "r g b")
 

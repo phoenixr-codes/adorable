@@ -11,7 +11,6 @@ along with text to print it.
    from adorable import color
    
    RED = color.from_name("red").fg
-   
    adorable.printc("Hello World", style = RED)
 
 .. colored::

@@ -33,8 +33,8 @@ When should I use adorable?
 adorable is not recommended for quick debugging.
 The above mentioned
 `rich <https://github.com/Textualize/rich>`_
-library provides syntax with less writing good
-for debugging.
+library provides syntax with less writing is
+generally good for debugging.
 
 adorable is suitable for pretty much any other
 use case.

@@ -24,7 +24,7 @@ sys.path.append(str(Path('./_ext').resolve()))
 project = 'adorable'
 copyright = f'{date.today().year}, phoenixR'
 author = 'phoenixR'
-release = '0.1.1'
+release = '0.1.3.post1'
 
 
 ###############

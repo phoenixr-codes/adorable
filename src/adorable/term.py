@@ -10,7 +10,7 @@ __all__ = ["Terminal"]
 from enum import auto, IntEnum
 import os
 import sys
-from typing import Iterable, Optional, TextIO, Union
+from typing import Iterable, Optional, TextIO
 
 
 cache: Optional[Terminal] = None
@@ -86,9 +86,14 @@ class Terminal(IntEnum):
         --------
         .. code-block::
            
-           Terminal.get_term()             # check if either stdout or stderr is valid
-           Terminal.get_term([])           # skip terminal check
-           Terminal.get_term([sys.stdout]) # only check stdout
+           # check if either stdout or stderr is valid
+           Terminal.get_term()
+           
+           # skip terminal check
+           Terminal.get_term([])
+           
+           # only check stdout
+           Terminal.get_term([sys.stdout])
         
         Raises
         ------
@@ -128,7 +133,11 @@ class Terminal(IntEnum):
         elif os.getenv("COLORTERM", "0") in ["truecolor", "24bit"]:
             res = cls.BIT24
         
-        elif os.getenv("TERM", "").removeprefix("xterm-").removesuffix("color") == "256":
+        elif (
+            os.getenv("TERM", "")
+                .removeprefix("xterm-")
+                .removesuffix("color")
+        ) == "256":
             res = cls.BIT8
         
         else:

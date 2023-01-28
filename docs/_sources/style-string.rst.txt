@@ -59,19 +59,9 @@ it would be a function.
 Using markup
 ============
 
-.. attention::
-   
-   This feature is not yet implemented in this
-   library but will be in the near future.
-
 It is often necessary to only style specific
 parts of a string. Instead of concatenating these
 parts, markup can be used.
-
-adorable uses the ``Very Minimal Markup Language``
-(VMML) exclusively created for this library!
-VMML is written in Rust and ensures fast and safe
-processing.
 
 .. code-block::
    

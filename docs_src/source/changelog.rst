@@ -6,6 +6,18 @@ Changelog
    
    Only releases **after** 0.0.1b2 are recorded here.
 
+========================
+0.1.3.post1 (28-01-2023)
+========================
+
+-------
+Changed
+-------
+
+* |:wastebasket:| Removed unused imports.
+* |:sparkles:| Reformatted source code style.
+
+
 ==================
 0.1.3 (21-01-2023)
 ==================
