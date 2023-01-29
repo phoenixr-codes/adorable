@@ -6,6 +6,18 @@ Changelog
    
    Only releases **after** 0.0.1b2 are recorded here.
 
+==================
+0.1.4 (29-01-2023)
+==================
+
+-----
+Added
+-----
+
+* |:new:| Added ``with``-block support for ansi
+  objects.
+
+
 ========================
 0.1.3.post1 (28-01-2023)
 ========================

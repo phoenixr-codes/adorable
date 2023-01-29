@@ -5,7 +5,7 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Creating Colors" href="creating-color.html" /><link rel="prev" title="Quickstart" href="quickstart.html" />
 
-    <!-- Generated with Sphinx 5.0.0 and Furo 2022.12.07 -->
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Styling A String - adorable 0.1.3.post1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
@@ -235,14 +235,14 @@ directly print it).</p>
 <p><em>The snippets below have the same result.</em></p>
 <dl class="py function">
 <dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">adorable.ansi.</span></span><span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-prename descclassname"><span class="pre">adorable.ansi.</span></span><span class="sig-name descname"><span class="pre">paint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span> <span class="pre">'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/adorable/ansi.html#paint"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Styles a string.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to style. The <code class="docutils literal notranslate"><span class="pre">str()</span></code> function will
 be called on each object.</p></li>
-<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="api.html#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em>]</em>) – Ansi object that styles the string.</p></li>
+<li><p><strong>style</strong> (<a class="reference internal" href="api.html#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em> | </em><em>None</em>) – Ansi object that styles the string.</p></li>
 <li><p><strong>sep</strong> (<em>str</em>) – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 </ul>
 </dd>
@@ -257,10 +257,10 @@ be called on each object.</p></li>
 </div>
 <dl class="py function">
 <dt class="sig sig-object py">
-<span class="sig-prename descclassname"><span class="pre">adorable.ansi.</span></span><span class="sig-name descname"><span class="pre">printc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span></dt>
+<span class="sig-prename descclassname"><span class="pre">adorable.ansi.</span></span><span class="sig-name descname"><span class="pre">printc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/adorable/ansi.html#printc"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
 <dd><p>Prints a styled string.</p>
 <p>This function takes the same arguments as the
-built-in print function. It also provides
+built-in <a class="reference external" href="https://docs.python.org/3/library/functions.html#print">print</a> function. It also provides
 an extra parameter.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -392,10 +392,8 @@ for large projects.</p>
     </aside>
   </div>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>

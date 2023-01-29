@@ -1,8 +1,9 @@
-adorable
-========
-
-Make the UI of your project **adorable**.
-
+<p align="center">
+  <h1 align="center">adorable</h1>
+  <p align="center">
+    Make the UI of your project <b>adorable</b>.
+  </p>
+</p>
 
 Basic Usage
 -----------

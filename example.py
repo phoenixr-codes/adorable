@@ -35,3 +35,9 @@ print(adorable.markup_xml(
         abc = "RED"
     )
 ))
+
+
+with ERROR:
+    print("oh hello!")
+    1 / 0
+    print("we definetly have some issues here")

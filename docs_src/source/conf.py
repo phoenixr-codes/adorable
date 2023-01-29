@@ -24,7 +24,7 @@ sys.path.append(str(Path('./_ext').resolve()))
 project = 'adorable'
 copyright = f'{date.today().year}, phoenixR'
 author = 'phoenixR'
-release = '0.1.3.post1'
+release = '0.1.4'
 
 
 ###############
@@ -34,6 +34,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.extlinks',
     'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
     
     'sphinx_copybutton',
     'sphinx_inline_tabs',
@@ -50,11 +51,13 @@ extlinks = dict(
     piplib = ('https://pypi.org/project/%s', '%s')
 )
 
+
 ####################
 # TODO Configuration
 
 todo_include_todos = True
 todo_emit_warnings = True
+
 
 #######################
 # Autodoc Configuration
@@ -69,6 +72,7 @@ autodoc_default_options = dict.fromkeys('''
 autodoc_member_order = 'bysource'
 autodoc_typehints = 'description'
 autoclass_content = 'both'
+
 
 ####################
 # REPL Configuration

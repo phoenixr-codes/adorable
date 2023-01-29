@@ -4,7 +4,8 @@ from abc import ABC
 from copy import copy
 import re
 from sys import stdout
-from typing import Any, Optional, TextIO
+from types import TracebackType
+from typing import Any, Literal, Optional, TextIO
 
 from .utils import _copydoc
 
@@ -50,7 +51,7 @@ def printc(*args: Any, **kwargs: Any) -> None:
     Prints a styled string.
     
     This function takes the same arguments as the
-    built-in print function. It also provides
+    built-in :pyfn:`print` function. It also provides
     an extra parameter.
     
     Parameters
@@ -100,6 +101,21 @@ class Ansi(ABC):
         Combines this and another style.
         """
         return self.extend(other)
+    
+    def __enter__(self) -> None:
+        """
+        Enables the ansi effect within a block.
+        """
+        self.enable()
+    
+    def __exit__(
+        self,
+        exc_type: Optional[type[BaseException]],
+        exc_value: Optional[BaseException],
+        exc_traceback: Optional[TracebackType],
+    ) -> Literal[False]:
+        self.disable()
+        return False
     
     def extend(self, *others: Ansi) -> Ansi:
         """
