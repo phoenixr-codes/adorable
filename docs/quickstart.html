@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Styling A String" href="style-string.html" /><link rel="prev" title="Installation" href="installation.html" />
 
-    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
-        <title>Quickstart - adorable 0.1.3.post1 documentation</title>
+    <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
+        <title>Quickstart - adorable 0.1.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -126,7 +126,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">adorable 0.1.3.post1 documentation</div></a>
+      <a href="index.html"><div class="brand">adorable 0.1.5 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -149,7 +149,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">adorable 0.1.3.post1 documentation</span>
+  <span class="sidebar-brand-text">adorable 0.1.5 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -170,17 +170,15 @@
 <li class="toctree-l1"><a class="reference internal" href="color-system.html">Color System</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="why-adorable.html">Why Use adorable</a></li>
-<li class="toctree-l1"><a class="reference internal" href="caution-ansi-strings.html">Caution When Using Ansi Strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="caution-ansi-strings.html">Caution When Using Strings With Ansi Sequences</a></li>
 <li class="toctree-l1"><a class="reference internal" href="show-appreciation.html">Show Appreciation</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Library Updates</span></p>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="future.html">Upcoming Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -234,25 +232,15 @@ along with text to print it.</p>
 feel free to
 <a class="reference external" href="https://github.com/phoenixr-codes/adorable/issues/new?assignees=&amp;labels=&amp;template=missing-terminal-support.md&amp;title=">open an issues on github</a>
 so it can be fixed. The reason for this might be that
-your terminal is not supported.
-<a class="reference external" href="/color-system.html">You can however force applying colors</a>.</p>
-<p>You can also select specific parts of your text
-to apply a style on them by using XML.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Using XML for markup is likely going to be replaced in the
-future by a more friendly optimized markup language.</p>
-</div>
+your terminal is not supported.You can however
+<a class="reference external" href="/color-system.html">force applying colors</a>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">adorable</span>
 <span class="kn">from</span> <span class="nn">adorable</span> <span class="kn">import</span> <span class="n">color</span>
 
 <span class="n">BOLD</span> <span class="o">=</span> <span class="n">adorable</span><span class="o">.</span><span class="n">BOLD</span>
 <span class="n">BLUE</span> <span class="o">=</span> <span class="n">color</span><span class="o">.</span><span class="n">from_name</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fg</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">adorable</span><span class="o">.</span><span class="n">markup_xml</span><span class="p">(</span>
-    <span class="s2">&quot;Hello &lt;BOLD&gt;wonderful&lt;/BOLD&gt; &lt;BLUE&gt;World&lt;/BLUE&gt;&quot;</span><span class="p">,</span>
-    <span class="n">adorable</span><span class="o">.</span><span class="n">filter_ansi</span><span class="p">(</span><span class="nb">locals</span><span class="p">())</span>
-<span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">BOLD</span><span class="si">:</span><span class="s2">wonderful</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">BLUE</span><span class="si">:</span><span class="s2">World</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hello</span> <span class="p">[</span><span class="n">wonderful</span><span class="p">](</span><span class="n">bold</span><span class="p">)</span> <span class="p">[</span><span class="n">World</span><span class="p">](</span><span class="n">blue</span><span class="p">)</span>
@@ -322,6 +310,9 @@ future by a more friendly optimized markup language.</p>
     </aside>
   </div>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>

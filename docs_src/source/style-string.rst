@@ -65,12 +65,9 @@ parts, markup can be used.
 
 .. code-block::
    
-   from adorable import color, filter_ansi, markup_xml
+   from adorable import color
    
    RED = color.from_name("red").fg
-   
-   print(markup_xml("Hello [colorful](RED) World", filter_ansi(locals())))
+   print(f"Hello {RED:colorful} World")
 
-The above example uses the :func:`adorable.filter_ansi` method,
-however a :ref:`stylesheet` should be used, especially
-for large projects.
+

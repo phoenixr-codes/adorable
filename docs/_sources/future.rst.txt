@@ -13,6 +13,5 @@ will appear in a future release.
 * "``rainbow``" extension for creating and working with
   gradients
 * add CLI application
-* add tests
-* add ``with``-block support
+* add more tests
 

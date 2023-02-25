@@ -39,17 +39,15 @@ Table Of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Other
+   :caption: Appendix
    
    why-adorable
    caution-ansi-strings
-   glossary
    show-appreciation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Library Updates
+   :caption: Development
    
    future
-   known-issues
    changelog

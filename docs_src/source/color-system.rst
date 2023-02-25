@@ -30,9 +30,9 @@ Alternatively we can use fallback values::
     from adorable import color
     
     term = color.get_color()
+
     if term == color.Color3bit:
         WARN = color.from_name("red").bg
-    
     else:
         WARN = color.from_name("orange").bg
 

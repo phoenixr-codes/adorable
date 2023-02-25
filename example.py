@@ -36,6 +36,7 @@ print(adorable.markup_xml(
     )
 ))
 
+print(f"Hello {RED:World}!")
 
 with ERROR:
     print("oh hello!")

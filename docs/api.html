@@ -2,11 +2,11 @@
 <html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Why Use adorable" href="why-adorable.html" /><link rel="prev" title="Color System" href="color-system.html" />
 
-    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
-        <title>API - adorable 0.1.3.post1 documentation</title>
+    <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
+        <title>API - adorable 0.1.5 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
@@ -126,7 +126,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">adorable 0.1.3.post1 documentation</div></a>
+      <a href="index.html"><div class="brand">adorable 0.1.5 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -149,7 +149,7 @@
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
-  <span class="sidebar-brand-text">adorable 0.1.3.post1 documentation</span>
+  <span class="sidebar-brand-text">adorable 0.1.5 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -170,17 +170,15 @@
 <li class="toctree-l1"><a class="reference internal" href="color-system.html">Color System</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">API</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Other</span></p>
+<p class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="why-adorable.html">Why Use adorable</a></li>
-<li class="toctree-l1"><a class="reference internal" href="caution-ansi-strings.html">Caution When Using Ansi Strings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="caution-ansi-strings.html">Caution When Using Strings With Ansi Sequences</a></li>
 <li class="toctree-l1"><a class="reference internal" href="show-appreciation.html">Show Appreciation</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Library Updates</span></p>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="future.html">Upcoming Features</a></li>
-<li class="toctree-l1"><a class="reference internal" href="known-issues.html">Known Issues</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
@@ -438,7 +436,7 @@ mode.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>] </em><em>| </em><em>RGB</em><em> | </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em>) – </p>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -474,7 +472,7 @@ mode.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>hex</strong> (<em>str</em><em> | </em><em>int</em>) – </p>
+<dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -488,7 +486,7 @@ mode.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -502,7 +500,7 @@ mode.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -618,7 +616,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -643,7 +641,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -692,7 +690,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>hex</strong> (<em>str</em><em> | </em><em>int</em>) – </p>
+<dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -728,7 +726,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>] </em><em>| </em><em>RGB</em><em> | </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em>) – </p>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -876,7 +874,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -901,7 +899,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -950,7 +948,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>hex</strong> (<em>str</em><em> | </em><em>int</em>) – </p>
+<dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -986,7 +984,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>] </em><em>| </em><em>RGB</em><em> | </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em>) – </p>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -1134,7 +1132,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -1159,7 +1157,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -1208,7 +1206,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>hex</strong> (<em>str</em><em> | </em><em>int</em>) – </p>
+<dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -1244,7 +1242,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>] </em><em>| </em><em>RGB</em><em> | </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em>) – </p>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -1392,7 +1390,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -1417,7 +1415,7 @@ smaller color palette when neither is supported.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -1466,7 +1464,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>hex</strong> (<em>str</em><em> | </em><em>int</em>) – </p>
+<dd class="field-odd"><p><strong>hex</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -1502,7 +1500,7 @@ smaller color palette when neither is supported.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>rgb</strong> (<em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>] </em><em>| </em><em>RGB</em><em> | </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em>) – </p>
+<dd class="field-odd"><p><strong>rgb</strong> (<em>Union</em><em>[</em><em>tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em><em>, </em><em>RGB</em><em>, </em><em>tuple</em><em>[</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>]</em><em>]</em>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference internal" href="#adorable.color.Color" title="adorable.color.Color"><em>Color</em></a></p>
@@ -1690,10 +1688,10 @@ has to be escaped.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>string</strong> (<em>str</em>) – The markup text.</p></li>
-<li><p><strong>style</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a><em>] </em><em>| </em><em>None</em>) – Mapping of keys and the style to use.
+<li><p><strong>style</strong> (<em>Optional</em><em>[</em><em>dict</em><em>[</em><em>str</em><em>, </em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>adorable.ansi.Ansi</em></a><em>]</em><em>]</em>) – Mapping of keys and the style to use.
 You may want to use
 <a class="reference internal" href="#adorable.filter_ansi" title="adorable.filter_ansi"><code class="xref py py-func docutils literal notranslate"><span class="pre">adorable.filter_ansi()</span></code></a>.</p></li>
-<li><p><strong>insert</strong> (<em>tuple</em><em>[</em><em>tuple</em><em>[</em><em>Any</em><em>, </em><em>...</em><em>]</em><em>, </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>] </em><em>| </em><em>None</em>) – <p>Insert variables to string.</p>
+<li><p><strong>insert</strong> (<em>Optional</em><em>[</em><em>tuple</em><em>[</em><em>tuple</em><em>[</em><em>Any</em><em>, </em><em>...</em><em>]</em><em>, </em><em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em><em>]</em><em>]</em>) – <p>Insert variables to string.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="#adorable.markup.insert" title="adorable.markup.insert"><code class="xref py py-func docutils literal notranslate"><span class="pre">insert()</span></code></a></p>
@@ -1784,7 +1782,7 @@ be used which is also safe.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>Path</em><em> | </em><em>module</em><em> | </em><em>str</em><em> | </em><em>None</em>) – <p>When a <code class="docutils literal notranslate"><span class="pre">Path</span></code> or <code class="docutils literal notranslate"><span class="pre">str</span></code> is given, it
+<li><p><strong>source</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>Path</em><em>, </em><em>module</em><em>, </em><em>str</em><em>]</em><em>]</em>) – <p>When a <code class="docutils literal notranslate"><span class="pre">Path</span></code> or <code class="docutils literal notranslate"><span class="pre">str</span></code> is given, it
 will load all style objects from that file
 by importing it. If the path is a directory
 it will try to find a file named <code class="docutils literal notranslate"><span class="pre">_stylesheet.py</span></code>
@@ -1888,7 +1886,7 @@ time by setting <code class="docutils literal notranslate"><span class="pre">cac
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>stream</strong> (<em>Iterable</em><em>[</em><em>TextIO</em><em>] </em><em>| </em><em>None</em>) – <p>The streams to query.</p>
+<li><p><strong>stream</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>TextIO</em><em>]</em><em>]</em>) – <p>The streams to query.</p>
 <p>If all of the streams provided are invalid
 terminal, <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> is raised.
 Defaults to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> and <code class="docutils literal notranslate"><span class="pre">stderr</span></code>.</p>
@@ -1924,7 +1922,7 @@ iterable such as <code class="docutils literal notranslate"><span class="pre">[]
 </dd>
 <dt class="field-even">Parameters<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>stream</strong> (<em>Iterable</em><em>[</em><em>TextIO</em><em>] </em><em>| </em><em>None</em>) – </p></li>
+<li><p><strong>stream</strong> (<em>Optional</em><em>[</em><em>Iterable</em><em>[</em><em>TextIO</em><em>]</em><em>]</em>) – </p></li>
 <li><p><strong>remember</strong> (<em>bool</em>) – </p></li>
 </ul>
 </dd>
@@ -1963,7 +1961,7 @@ by the terminal.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – Objects to style. The <code class="docutils literal notranslate"><span class="pre">str()</span></code> function will
 be called on each object.</p></li>
-<li><p><strong>style</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em> | </em><em>None</em>) – Ansi object that styles the string.</p></li>
+<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em>]</em>) – Ansi object that styles the string.</p></li>
 <li><p><strong>sep</strong> (<em>str</em>) – String that separates <code class="docutils literal notranslate"><span class="pre">args</span></code>.</p></li>
 </ul>
 </dd>
@@ -1981,7 +1979,7 @@ be called on each object.</p></li>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>args</strong> (<em>Any</em>) – </p></li>
-<li><p><strong>style</strong> (<a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>style</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="#adorable.ansi.Ansi" title="adorable.ansi.Ansi"><em>Ansi</em></a><em>]</em>) – </p></li>
 <li><p><strong>sep</strong> (<em>str</em>) – </p></li>
 </ul>
 </dd>
@@ -2092,7 +2090,7 @@ an extra parameter.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -2117,7 +2115,7 @@ an extra parameter.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -2198,7 +2196,7 @@ no data.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -2223,7 +2221,7 @@ no data.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -2279,7 +2277,7 @@ no data.</p>
 <dd><p>Disables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -2304,7 +2302,7 @@ no data.</p>
 <dd><p>Enables the ansi style.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>TextIO</em><em> | </em><em>None</em>) – File to write to. Defaults to standard output.</p>
+<dd class="field-odd"><p><strong>file</strong> (<em>Optional</em><em>[</em><em>TextIO</em><em>]</em>) – File to write to. Defaults to standard output.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -2743,6 +2741,9 @@ no data.</p>
     </aside>
   </div>
 </div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>

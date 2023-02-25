@@ -5,9 +5,9 @@ Installation
 You can install adorable from PyPI or directly
 from the GitHub repository.
 
-====
-PyPI
-====
+===
+pip
+===
 
 .. code-block:: bash
    

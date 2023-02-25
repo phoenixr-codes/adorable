@@ -7,6 +7,18 @@ Changelog
    Only releases **after** 0.0.1b2 are recorded here.
 
 ==================
+0.1.5 (25-02-2023)
+==================
+
+-----
+Added
+-----
+
+* |:new:| Added ``__format__`` support for ansi
+  objects.
+
+
+==================
 0.1.4 (29-01-2023)
 ==================
 

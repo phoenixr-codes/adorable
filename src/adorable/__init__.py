@@ -15,7 +15,7 @@ from .style import (
     BLINK,
     INVERSE,
     INVISIBLE,
-    STRIKETHROUGH
+    STRIKETHROUGH,
 )
 
 from .ansi import *
@@ -28,13 +28,14 @@ from . import term
 ANSI_REGEX = re.compile("\x1b\\[.*?[ABCDEFGHJKfnsumlh]")
 """Regex pattern that matches most ansi escape sequences."""
 
+
 def use(terminal: str) -> None:
     """
     .. versionadded:: 0.2.0b1
-    
+
     A quick way of overriding the current color
     system manually.
-    
+
     Parameters
     ----------
     terminal
@@ -44,6 +45,7 @@ def use(terminal: str) -> None:
     """
     term.cache = term.Terminal[terminal]
 
+
 def filter_ansi(style: Mapping[str, Any]) -> dict[str, Ansi]:
     """
     Filters all ansi objects inside a mapping. Useful when
@@ -51,4 +53,3 @@ def filter_ansi(style: Mapping[str, Any]) -> dict[str, Ansi]:
     or ``module.__dict__`` can be used.
     """
     return {k: v for k, v in style.items() if isinstance(v, Ansi)}
-

@@ -1,6 +1,6 @@
-*******************************
-Caution When Using Ansi Strings
-*******************************
+**********************************************
+Caution When Using Strings With Ansi Sequences
+**********************************************
 
 .. important::
    
@@ -24,14 +24,14 @@ as characters.
 Keep this in mind, when working with ansi strings.
 
 
-==============================================
+==========================================
 Using :pylib:`textwrap`  with ansi strings
-==============================================
+==========================================
 
 The textwrap library uses the built-in :pyfn:`len`
 function among other things to return wrapped
 text. So using it with strings that contains
-ansi sequences will return not expected output.
+ansi sequences will return an unexpected output.
 
 The library :piplib:`ansiwrap` will only work
 for very basic colors and is therefore discouraged.
