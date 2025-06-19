@@ -362,7 +362,7 @@ class Color3bit(Color):
         if ground in [_Ground.NONE, _Ground.BOTH]:
             raise ValueError()
 
-        return [30 + value]
+        return [(30 if ground == _Ground.FORE else 40) + value]
 
     @classmethod
     def _from_rgb(cls, rgb: T_RGB) -> Color3bit:
