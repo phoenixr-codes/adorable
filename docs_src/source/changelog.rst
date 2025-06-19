@@ -7,6 +7,18 @@ Changelog
    Only releases **after** 0.0.1b2 are recorded here.
 
 ==================
+0.1.6 (19-06-2025)
+==================
+
+-------
+Changed
+-------
+
+* |:hammer:| Fixed issue where background color of
+  :class:`adorable.Color3Bit` is represented as
+  foreground color.
+
+==================
 0.1.5 (25-02-2023)
 ==================
 
